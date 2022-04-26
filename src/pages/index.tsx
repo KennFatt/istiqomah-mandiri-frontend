@@ -1,8 +1,8 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { LandingPageLayout } from "features/landing-page";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return <div></div>;
+  return <LandingPageLayout />;
 };
 
 export default Home;
