@@ -8,7 +8,7 @@ interface LandingPageLayoutProps extends BaseProps {}
 
 export const LandingPageLayout: FC<LandingPageLayoutProps> = ({ children }) => {
   return (
-    <Container bg="gray.50" maxW="full">
+    <Container bg="gray.50" maxW="full" p="0">
       {/* Top level header & navigation */}
       <Header />
 
