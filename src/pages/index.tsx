@@ -1,8 +1,8 @@
 import { LandingPageLayout } from "features/landing-page";
-import type { NextPage } from "next";
+import type { NextPageWithLayout } from "utils/common-types";
 
-const Home: NextPage = () => {
-  return <LandingPageLayout />;
-};
+const Home: NextPageWithLayout = () => null;
+
+Home.getLayout = (page) => <LandingPageLayout>{page}</LandingPageLayout>;
 
 export default Home;

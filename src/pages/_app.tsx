@@ -1,12 +1,14 @@
 import "styles/globals.scss";
-import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "utils/chakra-theme";
+import type { AppPropsWithLayout } from "utils/common-types";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
     </ChakraProvider>
   );
 }
