@@ -1,6 +1,6 @@
 import { Box, Container } from "@chakra-ui/react";
 import type { FC } from "react";
-import { BaseProps } from "utils/react-fc-props";
+import { BaseProps } from "utils/common-types";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 

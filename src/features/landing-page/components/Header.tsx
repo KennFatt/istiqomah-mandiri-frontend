@@ -1,6 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import { FC } from "react";
-import { BaseProps } from "utils/react-fc-props";
+import { BaseProps } from "utils/common-types";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileNavigation } from "./MobileNavigation";
 import { SectionContainer } from "./SectionContainer";

@@ -1,6 +1,6 @@
 import { Box, Container } from "@chakra-ui/react";
 import { FC, useMemo } from "react";
-import { BaseProps } from "utils/react-fc-props";
+import { BaseProps } from "utils/common-types";
 import type { ContainerProps, BoxProps } from "@chakra-ui/react";
 
 export interface SectionContainerProps extends BaseProps {

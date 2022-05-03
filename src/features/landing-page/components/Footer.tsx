@@ -1,6 +1,6 @@
 import { Divider, Text, VStack } from "@chakra-ui/react";
 import { FC } from "react";
-import { BaseProps } from "utils/react-fc-props";
+import { BaseProps } from "utils/common-types";
 import { SectionContainer } from "./SectionContainer";
 
 interface FooterProps extends BaseProps {}

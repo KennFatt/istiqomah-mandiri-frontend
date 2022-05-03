@@ -10,7 +10,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { FC, useRef } from "react";
-import { BaseProps } from "utils/react-fc-props";
+import { BaseProps } from "utils/common-types";
 import Link from "next/link";
 import { NAVIGATION_LIST } from "../navigation-list";
 
