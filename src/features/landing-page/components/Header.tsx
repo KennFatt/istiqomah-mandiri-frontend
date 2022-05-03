@@ -13,7 +13,12 @@ interface HeaderProps extends BaseProps {}
 export const Header: FC<HeaderProps> = () => {
   return (
     <SectionContainer containerProps={{ as: "header" }}>
-      <Flex align="center" justify="space-between" px="2.5" py="6">
+      <Flex
+        align="center"
+        justify="space-between"
+        px={{ base: 0, lg: "2.5" }}
+        py="6"
+      >
         {/* Branding */}
         <Heading as="h3" fontFamily="branding" color="green.500">
           IstiqomahMandiri
