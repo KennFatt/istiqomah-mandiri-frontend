@@ -9,14 +9,7 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
-import {
-  ChangeEvent,
-  FC,
-  KeyboardEvent,
-  KeyboardEventHandler,
-  useCallback,
-  useState,
-} from "react";
+import { ChangeEvent, FC, KeyboardEvent, useCallback, useState } from "react";
 import type { BaseProps } from "utils/common-types";
 import { SectionContainer } from "../../SectionContainer";
 
@@ -86,7 +79,7 @@ export const InfaqFinder: FC<InfaqFinderProps> = () => {
         shadow="md"
         position="relative"
         zIndex="1"
-        mt={{ base: "-40", sm: "-16" }}
+        mt={{ base: "-20", sm: "-16" }}
       >
         <VStack spacing="4" alignItems="start" fontSize={fontSize}>
           <VStack alignItems="start">
@@ -99,7 +92,7 @@ export const InfaqFinder: FC<InfaqFinderProps> = () => {
             </Text>
           </VStack>
 
-          <Divider />
+          <Divider bg="gray.200" />
 
           <InputGroup size={inputSize}>
             <Input

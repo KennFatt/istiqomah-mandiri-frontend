@@ -25,7 +25,7 @@ export const Hero: FC<HeroProps> = () => {
 
   /** Hero headline font size */
   const headlineFontSize = useBreakpointValue({
-    base: "md",
+    base: "xl",
     lg: "2xl",
     xl: "3xl",
     "3xl": "5xl",
@@ -36,25 +36,24 @@ export const Hero: FC<HeroProps> = () => {
       centerContent={false}
       containerProps={{
         bg: "rgba(240, 255, 244, .25)",
-        paddingInline: 0,
         position: "relative",
         overflow: "hidden",
+        paddingInline: { sm: 0 },
       }}
     >
-      <SectionContainer containerProps={{ position: "relative", zIndex: 1 }}>
-        <Stack
-          direction={{ base: "column", sm: "row" }}
-          spacing="4"
-          py={{ base: "24", sm: 0 }}
-        >
+      <SectionContainer
+        containerProps={{ position: "relative", zIndex: 1, p: 0 }}
+      >
+        <Stack direction={{ base: "column", sm: "row" }} spacing="4">
           {/* LHS: CTA */}
-          <Center w="full" justifyContent="start" zIndex={{ base: 10 }}>
+          <Center w="full" justifyContent="start" py={{ base: "6", sm: 0 }}>
             <VStack alignItems="start" spacing="6">
               <Text
                 as="h1"
                 color="green.500"
                 fontWeight="semibold"
                 fontSize={headlineFontSize}
+                maxW={{ base: "xs", sm: "initial" }}
               >
                 Program Untuk Membantu Proses Meninggal Dunia Keluarga Anda
               </Text>
@@ -84,7 +83,7 @@ export const Hero: FC<HeroProps> = () => {
           </Center>
 
           {/* RHS: Illustration */}
-          <Center w="full" justifyContent={{ base: "start", lg: "center" }}>
+          <Center w="full">
             <Image
               src="/assets/landing-page/hero-illustration.svg"
               maxW={{ base: "96", lg: "full" }}
