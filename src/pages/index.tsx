@@ -1,4 +1,4 @@
-import { Hero, LandingPageLayout } from "features/landing-page";
+import { Hero, InfaqFinder, LandingPageLayout } from "features/landing-page";
 
 import type { NextPageWithLayout } from "utils/common-types";
 
@@ -6,6 +6,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <>
       <Hero />
+      <InfaqFinder />
     </>
   );
 };
