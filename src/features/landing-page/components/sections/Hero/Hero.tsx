@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import type { FC } from "react";
 import type { BaseProps } from "utils/common-types";
-import { SectionContainer } from "../../SectionContainer";
+import { SectionContainer } from "features/landing-page";
 
 import styles from "./Hero.module.scss";
 

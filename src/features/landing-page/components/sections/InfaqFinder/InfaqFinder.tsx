@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ChangeEvent, FC, KeyboardEvent, useCallback, useState } from "react";
 import type { BaseProps } from "utils/common-types";
-import { SectionContainer } from "../../SectionContainer";
+import { SectionContainer } from "features/landing-page";
 
 interface InfaqFinderProps extends BaseProps {}
 

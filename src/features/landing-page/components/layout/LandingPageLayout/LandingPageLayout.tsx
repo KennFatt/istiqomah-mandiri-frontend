@@ -1,10 +1,9 @@
 import { Box, Container } from "@chakra-ui/react";
 import type { FC } from "react";
-import { BaseProps } from "utils/common-types";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import type { BaseProps } from "utils/common-types";
+import { Footer, Header } from "features/landing-page";
 
-interface LandingPageLayoutProps extends BaseProps {}
+export interface LandingPageLayoutProps extends BaseProps {}
 
 export const LandingPageLayout: FC<LandingPageLayoutProps> = ({ children }) => {
   return (

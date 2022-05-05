@@ -12,7 +12,7 @@ import {
 import { FC, useRef } from "react";
 import { BaseProps } from "utils/common-types";
 import Link from "next/link";
-import { NAVIGATION_LIST } from "../navigation-list";
+import { NAVIGATION_LIST } from "features/landing-page";
 
 interface MobileNavigationProps extends BaseProps {}
 

@@ -2,7 +2,7 @@ import { HStack, Link as ChakraLink } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
 import type { BaseProps } from "utils/common-types";
-import { NAVIGATION_LIST } from "features/landing-page/navigation-list";
+import { NAVIGATION_LIST } from "features/landing-page";
 
 interface DesktopNavigationProps extends BaseProps {}
 

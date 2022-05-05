@@ -1,9 +1,11 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
-import { FC } from "react";
+import { Flex, Heading } from "@chakra-ui/react";
+import type { FC } from "react";
 import { BaseProps } from "utils/common-types";
-import { DesktopNavigation } from "./DesktopNavigation";
-import { MobileNavigation } from "./MobileNavigation";
-import { SectionContainer } from "./SectionContainer";
+import {
+  DesktopNavigation,
+  MobileNavigation,
+  SectionContainer,
+} from "features/landing-page";
 
 interface HeaderProps extends BaseProps {}
 

@@ -1,2 +1,3 @@
-export * from "./LandingPageLayout";
+export * from "./base";
+export * from "./layout";
 export * from "./sections";
