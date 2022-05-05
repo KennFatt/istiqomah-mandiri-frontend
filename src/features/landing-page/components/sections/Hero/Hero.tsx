@@ -8,9 +8,10 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
-import { FC } from "react";
-import { BaseProps } from "utils/common-types";
+import type { FC } from "react";
+import type { BaseProps } from "utils/common-types";
 import { SectionContainer } from "../../SectionContainer";
+
 import styles from "./Hero.module.scss";
 
 interface HeroProps extends BaseProps {}
@@ -21,6 +22,14 @@ interface HeroProps extends BaseProps {}
 export const Hero: FC<HeroProps> = () => {
   /** Responsive CTA button size props */
   const ctaButtonSize = useBreakpointValue({ base: "sm", lg: "md", xl: "lg" });
+
+  /** Hero headline font size */
+  const headlineFontSize = useBreakpointValue({
+    base: "md",
+    lg: "2xl",
+    xl: "3xl",
+    "3xl": "5xl",
+  });
 
   return (
     <SectionContainer
@@ -45,7 +54,7 @@ export const Hero: FC<HeroProps> = () => {
                 as="h1"
                 color="green.500"
                 fontWeight="semibold"
-                fontSize={{ base: "md", lg: "2xl", xl: "3xl", "3xl": "5xl" }}
+                fontSize={headlineFontSize}
               >
                 Program Untuk Membantu Proses Meninggal Dunia Keluarga Anda
               </Text>
