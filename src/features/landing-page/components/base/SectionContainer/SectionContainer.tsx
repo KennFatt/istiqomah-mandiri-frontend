@@ -4,9 +4,6 @@ import { BaseProps } from "utils/common-types";
 import type { ContainerProps, BoxProps } from "@chakra-ui/react";
 
 export interface SectionContainerProps extends BaseProps {
-  /** Native element `id` attribute for its container Component. */
-  id?: string;
-
   containerProps?: ContainerProps;
   boxProps?: BoxProps;
 
@@ -17,7 +14,6 @@ export interface SectionContainerProps extends BaseProps {
 }
 
 export const SectionContainer: FC<SectionContainerProps> = ({
-  id,
   boxProps,
   containerProps,
   children,
@@ -35,12 +31,7 @@ export const SectionContainer: FC<SectionContainerProps> = ({
   }, [_debugSize]);
 
   return (
-    <Container
-      maxW="full"
-      px={pxProps}
-      bg={_bgDebugSize}
-      {...{ ...containerProps, id }}
-    >
+    <Container maxW="full" px={pxProps} bg={_bgDebugSize} {...containerProps}>
       <Box w="full" {...boxProps}>
         {children}
       </Box>
