@@ -3,3 +3,4 @@ export * from "./Footer";
 export * from "./Header";
 export * from "./MobileNavigation";
 export * from "./SectionContainer";
+export * from "./TextSectionContainer";
