@@ -8,6 +8,9 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   swcMinify: true,
+  images: {
+    domains: ["picsum.photos"],
+  },
 };
 
 module.exports = withPlugins([withBundleAnalyzer], nextConfig);
