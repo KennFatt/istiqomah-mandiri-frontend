@@ -11,6 +11,9 @@ const nextConfig = {
   images: {
     domains: ["picsum.photos"],
   },
+  compiler: {
+    removeConsole: true,
+  },
 };
 
 module.exports = withPlugins([withBundleAnalyzer], nextConfig);
