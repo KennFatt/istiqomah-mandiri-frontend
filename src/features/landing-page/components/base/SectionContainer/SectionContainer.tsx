@@ -1,6 +1,6 @@
-import { Box, Container } from "@chakra-ui/react";
-import { FC, useMemo } from "react";
-import { BaseProps } from "utils/common-types";
+import { Box, Container, useBreakpointValue } from "@chakra-ui/react";
+import type { FC } from "react";
+import type { BaseProps } from "utils/common-types";
 import type { ContainerProps, BoxProps } from "@chakra-ui/react";
 
 export interface SectionContainerProps extends BaseProps {
@@ -20,15 +20,26 @@ export const SectionContainer: FC<SectionContainerProps> = ({
   centerContent = true,
   _debugSize = false,
 }) => {
-  const pxProps = useMemo(() => {
-    return centerContent ? ["4", "8", null, "12", "16", "32"] : undefined;
-  }, [centerContent]);
+  const controlledContainerPx = useBreakpointValue({
+    base: "4",
+    sm: "8",
+    lg: "12",
+    xl: "16",
+    "2xl": "32",
+    "3xl": "72",
+  });
+  const pxProps = centerContent ? controlledContainerPx : undefined;
 
-  const _bgDebugSize = useMemo(() => {
-    return _debugSize
-      ? ["red.200", "yellow.200", null, "green.200"]
-      : undefined;
-  }, [_debugSize]);
+  const controlledBackgroundDebugSize = useBreakpointValue({
+    base: "red.200",
+    sm: "orange.200",
+    md: "purple.200",
+    lg: "green.200",
+    xl: "blue.200",
+    "2xl": "teal.200",
+    "3xl": "cyan.200",
+  });
+  const _bgDebugSize = _debugSize ? controlledBackgroundDebugSize : undefined;
 
   return (
     <Container maxW="full" px={pxProps} bg={_bgDebugSize} {...containerProps}>

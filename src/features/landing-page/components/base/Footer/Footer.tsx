@@ -15,7 +15,7 @@ export const Footer: FC<FooterProps> = () => {
   });
 
   return (
-    <SectionContainer containerProps={{ as: "footer", p: "6" }}>
+    <SectionContainer containerProps={{ as: "footer", py: "6" }}>
       <VStack spacing="5" alignItems="start">
         <Divider bg="gray.200" />
         <Text color="gray.600" fontSize={fontSize}>

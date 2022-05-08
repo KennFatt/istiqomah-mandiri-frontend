@@ -33,16 +33,18 @@ export const Hero: FC<HeroProps> = () => {
 
   return (
     <SectionContainer
-      centerContent={false}
       containerProps={{
         bg: "rgba(240, 255, 244, .25)",
         position: "relative",
         overflow: "hidden",
-        paddingInline: { sm: 0 },
       }}
     >
       <SectionContainer
-        containerProps={{ position: "relative", zIndex: 1, p: 0 }}
+        containerProps={{
+          position: "relative",
+          paddingInlineStart: 0,
+          paddingInlineEnd: 0,
+        }}
       >
         <Stack direction={{ base: "column", sm: "row" }} spacing="4">
           {/* LHS: CTA */}
