@@ -56,9 +56,9 @@ export const TextSectionContainer: FC<TextSectionContainerProps> = ({
     <SectionContainer
       containerProps={{ bg: "white", py: "12", my: "8", ...containerProps }}
     >
-      <Stack direction={{ base: "column", sm: "row" }} spacing="4">
+      <Stack direction={{ base: "column", md: "row" }} spacing="4">
         {/* LHS: Title and subtitle */}
-        <Center w={{ base: "full", sm: "50%" }} justifyContent="start">
+        <Center w={{ base: "full", md: "50%" }} justifyContent="start">
           <VStack alignItems="start" spacing="2">
             <Text
               fontWeight="medium"
@@ -79,7 +79,9 @@ export const TextSectionContainer: FC<TextSectionContainerProps> = ({
         </Center>
 
         {/* RHS: Content */}
-        {hasValidContent ? content : <Box />}
+        <Box w={{ base: "full", md: "50%" }}>
+          {hasValidContent ? content : null}
+        </Box>
       </Stack>
     </SectionContainer>
   );

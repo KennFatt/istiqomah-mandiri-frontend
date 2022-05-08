@@ -12,12 +12,7 @@ export const About: FC<AboutProps> = () => {
       subtitle="Tentang"
       containerProps={{ id: "tentang" }}
       content={
-        <VStack
-          w={{ base: "full", sm: "50%" }}
-          color="gray.600"
-          spacing="5"
-          alignItems="start"
-        >
+        <VStack color="gray.600" spacing="5" alignItems="start">
           <Text>
             Minim laborum magna et sunt velit aute. Id veniam est reprehenderit
             commodo labore labore dolor elit. Irure exercitation aute cillum
