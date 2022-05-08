@@ -28,7 +28,6 @@ export const Hero: FC<HeroProps> = () => {
     base: "xl",
     lg: "2xl",
     xl: "3xl",
-    "3xl": "5xl",
   });
 
   return (
@@ -44,6 +43,7 @@ export const Hero: FC<HeroProps> = () => {
           position: "relative",
           paddingInlineStart: 0,
           paddingInlineEnd: 0,
+          zIndex: 1,
         }}
       >
         <Stack direction={{ base: "column", sm: "row" }} spacing="4">
@@ -90,6 +90,10 @@ export const Hero: FC<HeroProps> = () => {
               src="/assets/landing-page/hero-illustration.svg"
               maxW={{ base: "96", lg: "full" }}
               w={{ lg: "full" }}
+              style={{
+                userSelect: "none",
+                pointerEvents: "none",
+              }}
             />
           </Center>
         </Stack>
