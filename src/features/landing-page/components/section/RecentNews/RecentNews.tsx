@@ -1,5 +1,5 @@
 import { SimpleGrid, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
-import type { FC } from "react";
+import { FC, useMemo } from "react";
 import type { BaseProps } from "utils/common-types";
 import {
   SectionContainer,
@@ -14,6 +14,12 @@ export const RecentNews: FC<RecentNewsProps> = () => {
     base: "2xl",
     lg: "4xl",
   });
+
+  /** TODO: use actual data */
+  const latestThreeNews = useMemo(
+    () => DUMMY_NEWS_LIST.filter((_, index) => index <= 2),
+    []
+  );
 
   return (
     <SectionContainer containerProps={{ id: "berita-terbaru", my: "8" }}>
@@ -30,7 +36,7 @@ export const RecentNews: FC<RecentNewsProps> = () => {
 
         {/* Three latest news */}
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing="4">
-          {DUMMY_NEWS_LIST.map(({ id, thumbnailUrl, title, slug }, index) => (
+          {latestThreeNews.map(({ id, thumbnailUrl, title, slug }, index) => (
             <NewsPostCard
               key={index}
               newsIdentifier={id}
